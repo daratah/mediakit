@@ -178,7 +178,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 [data-gbars] .bar-col>span{transition:opacity .5s ease calc(var(--d,0s) + .5s)}
 [data-gbars].gwait .gbar{transform:scaleY(0)}
 [data-gbars].gwait .bar-col>span{opacity:0}
-@supports (height:100svh){#top{min-height:calc(100svh - 120px) !important}}
+@supports (height:100svh){#top{min-height:calc(100svh - 212px) !important}}
 @media (min-width:900px){#top h1{max-width:none !important;white-space:nowrap;font-size:min(106px, calc((min(100vw, 1320px) - 2 * clamp(16px, 4vw, 56px)) / 14.3)) !important}}
 .social{display:flex;flex-wrap:wrap;gap:12px 24px}.social a{color:var(--mono);text-decoration:none}.social a:hover{color:#FF4D00}
 </style>
@@ -193,7 +193,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 </nav>
 </div></div>
 
-<section id="top" class="dk" style="position: relative; min-height: calc(100vh - 120px); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: var(--bg)" aria-label="Showreel">
+<section id="top" class="dk" style="position: relative; min-height: calc(100vh - 212px); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: var(--bg)" aria-label="Showreel">
 <video data-hero="1" src="media/hero.mp4" poster="media/d420768ea84a599e0d2ee2958f2d1713.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
 <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(12,11,9,0.97) 0%, rgba(12,11,9,0.6) 36%, rgba(12,11,9,0.08) 62%, rgba(12,11,9,0.62) 100%)" aria-hidden="true"></div>
 
@@ -252,7 +252,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 </div>
 </div>
 
-<section class="dk" aria-label="At a glance" style="background: var(--bg)"><div class="wrap" style="padding-top: clamp(56px, 7vw, 96px); padding-bottom: 0">
+<section class="dk" aria-label="At a glance" style="background: var(--bg)"><div class="wrap" style="padding-top: clamp(36px, 3.2vw, 52px); padding-bottom: 0">
 <div class="proof4 reveal">
 <div><b style="color: #FF4D00" data-to="1.59" data-dec="2" data-suf="M">1.59M</b><span>subscribers, doubled during 2025</span></div>
 <div><b data-to="213" data-dec="0" data-suf="M">213M</b><span>lifetime views</span></div>
@@ -760,7 +760,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
     paintProof(0);
     var po = new IntersectionObserver(function (entries) {
       if (entries.some(function (e) { return e.isIntersecting; })) { po.disconnect(); animate(1500, paintProof); }
-    }, { threshold: 0.4 });
+    }, { threshold: 0.9 });
     po.observe(proof);
   }
   /* Momentum: count up the stats, draw the subscriber line, grow the bars, each once on scroll-in */
