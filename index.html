@@ -32,6 +32,9 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 #contact .cta:hover{background:#F4F2EC !important;color:#0A0A0A !important}
 .kick{margin:0 0 18px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
 .kick i{font-style:normal;color:var(--faint)}
+.kick.num{font-size:clamp(16px,1.7vw,24px);gap:clamp(12px,1.1vw,16px)}
+.kick.num .livedot{width:clamp(10px,.95vw,14px);height:clamp(10px,.95vw,14px)}
+.kick.num.livebadge{padding:clamp(9px,.85vw,12px) clamp(13px,1.25vw,18px) !important}
 .h2{margin:0;font-weight:900;font-stretch:110%;font-size:clamp(42px,6vw,92px);line-height:.9;letter-spacing:-.03em;text-transform:uppercase}
 .head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px;margin-bottom:48px}
 .lead{margin:0;max-width:440px;font-size:17px;line-height:1.55;color:var(--muted)}
@@ -175,6 +178,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 [data-gbars] .bar-col>span{transition:opacity .5s ease calc(var(--d,0s) + .5s)}
 [data-gbars].gwait .gbar{transform:scaleY(0)}
 [data-gbars].gwait .bar-col>span{opacity:0}
+@supports (height:100svh){#top{min-height:calc(100svh - 120px) !important}}
 .social{display:flex;flex-wrap:wrap;gap:12px 24px}.social a{color:var(--mono);text-decoration:none}.social a:hover{color:#FF4D00}
 </style>
 </head>
@@ -188,13 +192,13 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 </nav>
 </div></div>
 
-<section id="top" class="dk" style="position: relative; min-height: 860px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: var(--bg)" aria-label="Showreel">
+<section id="top" class="dk" style="position: relative; min-height: calc(100vh - 120px); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: var(--bg)" aria-label="Showreel">
 <video data-hero="1" src="media/hero.mp4" poster="media/d420768ea84a599e0d2ee2958f2d1713.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
 <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(12,11,9,0.97) 0%, rgba(12,11,9,0.6) 36%, rgba(12,11,9,0.08) 62%, rgba(12,11,9,0.62) 100%)" aria-hidden="true"></div>
 
 
-<div class="wrap" style="position: relative; z-index: 2; width: 100%; padding-top: 200px; padding-bottom: 56px">
-<p class="kick" style="color: #F4F2EC">Brand partnerships</p>
+<div class="wrap" style="position: relative; z-index: 2; width: 100%; padding-top: clamp(112px, 16vh, 200px); padding-bottom: clamp(28px, 5vh, 56px)">
+<p class="kick" style="color: #F4F2EC; font-size: clamp(18px, 1.7vw, 24px); margin-bottom: 22px">Brand partnerships</p>
 <h1 style="margin: 0; max-width: 940px; font-weight: 900; font-stretch: 104%; font-size: clamp(46px, 6.8vw, 106px); line-height: 0.92; letter-spacing: -0.03em">Made for YouTube.<br><span style="color: #FF4D00">Watched on the big screen.</span></h1>
 <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 32px 48px">
 <div style="flex: 999 1 420px; min-width: 0">
@@ -262,7 +266,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <section id="films" class="sec dk" style="padding-top: clamp(72px, 8vw, 112px)"><div class="wrap">
 <div class="head reveal">
 <div>
-<p class="kick" style="color: #FF4D00"><i>01</i>Now showing</p>
+<p class="kick num" style="color: #FF4D00"><i>01</i>Now showing</p>
 <h2 class="h2">The films</h2>
 </div>
 <p class="lead">Long-form documentaries, mostly 35 to 60 minutes, shot on location and cut like action films.</p>
@@ -450,7 +454,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <section class="sec lt"><div class="wrap">
 <div class="head reveal">
 <div>
-<p class="kick" style="color: #FF4D00"><i>02</i>Who's watching</p>
+<p class="kick num" style="color: #FF4D00"><i>02</i>Who's watching</p>
 <h2 class="h2">On the<br>big screen</h2>
 </div>
 <p class="lead">These aren't films people scroll past. Most of the watch time happens on a TV, the way people watch a film.</p>
@@ -514,7 +518,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <section id="growth" class="sec dk"><div class="wrap">
 <div class="head reveal">
 <div>
-<p class="kick" style="color: #FF4D00"><i>03</i>Momentum</p>
+<p class="kick num" style="color: #FF4D00"><i>03</i>Momentum</p>
 <h2 class="h2">Gaining<br>speed</h2>
 </div>
 <p class="lead">The channel's climbing rapidly. Get in before the next jump.</p>
@@ -591,7 +595,7 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <video src="media/cdf7cc79b512ef3d5673b5f3dcd5b481.mp4" poster="media/09b0010d03227b551511c7abe4d2b026.jpg" autoplay="" muted="" loop="" playsinline="" preload="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
 <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.45) 100%)" aria-hidden="true"></div>
 <div class="wrap" style="position: absolute; left: 0; right: 0; bottom: 0; padding-bottom: clamp(28px, 5vw, 64px)">
-<p class="kick livebadge" style="display: inline-flex; padding: 8px 12px; background: #FF4D00; color: #0A0A0A"><i style="color: #0A0A0A">04</i><span class="livedot pulse" aria-hidden="true"></span>Next film · integration slot open</p>
+<p class="kick num livebadge" style="display: inline-flex; padding: 8px 12px; background: #FF4D00; color: #0A0A0A"><i style="color: #0A0A0A">04</i><span class="livedot pulse" aria-hidden="true"></span>Next film · integration slot open</p>
 <h2 class="h2" id="next" style="margin-top: 6px; color: #F4F2EC; white-space: nowrap; font-size: clamp(30px, 8.6vw, 128px)">Into the fire</h2>
 <p style="margin: 18px 0 0; max-width: 640px; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.45; color: #E6E2D8">Filmed in October 2026 inside Indonesia's wildfires, alongside animal and ecological conservation agencies and local rescue teams.</p>
 <div class="meta3"><span>Release · <b>December</b></span><span>Length · <b>1 hr 20 min</b></span></div>
