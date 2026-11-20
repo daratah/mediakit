@@ -123,8 +123,12 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 @media (max-width:640px){.films4{grid-template-columns:minmax(0,1fr)}}
 .row-x{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
 .row-xi{overflow:hidden;min-height:0}
-.mrow:hover .row-x,.mrow:focus-visible .row-x{grid-template-rows:1fr}
-@media (hover:none){.row-x{grid-template-rows:1fr}.hint-hover{display:none}}
+@media (hover:hover){.mrow:hover .row-x{grid-template-rows:1fr}.mrow.row-link:hover .row-arrow{transform:rotate(180deg)}}
+.mrow.open .row-x{grid-template-rows:1fr !important}
+.mrow.row-link.open .row-arrow{transform:rotate(180deg);color:#FF4D00 !important}
+.mrow.open{background:var(--hover)}
+.mrow:focus-visible{outline:2px solid #FF4D00;outline-offset:-2px}
+@media (hover:none){.hint-hover{display:none}}
 @media (prefers-reduced-motion: reduce){.marquee,.reveal,.pulse,.draw,.grow,.growx{animation:none !important}}
 .sbar{position:sticky;top:0;z-index:60;height:0}
 .sbar-in{color:#F4F2EC;background:transparent;border-bottom:1px solid transparent;transition:background-color .35s ease,border-color .35s ease,color .35s ease}
@@ -432,8 +436,8 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div class="reveal" style="margin-top: 48px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; margin: 0 0 8px"><p class="mono" style="margin: 0; text-transform: uppercase">More from the channel</p></div>
 <div style="border-top: 1px solid var(--line)">
-<a class="row-link mrow" href="https://youtu.be/qpiOaSWo_zo" target="_blank" rel="noopener" style="display: block; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--fg)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Exploring the World's Deadliest Islands</span><span class="mono" style="font-size: 13px">2024</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">6.8M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+<div class="row-link mrow" role="button" tabindex="0" aria-expanded="false" style="display: block; border-bottom: 1px solid var(--line); color: var(--fg); cursor: pointer">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Exploring the World's Deadliest Islands</span><span class="mono" style="font-size: 13px">2024</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">6.8M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
 <div class="row-x"><div class="row-xi"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 2px 8px 22px">
 <img src="media/966569ee87a313ff888daf4b3d21c9b4.jpg" alt="YouTube thumbnail for Exploring the World's Deadliest Islands" style="width: clamp(200px, 22vw, 280px); aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; flex: 0 0 auto">
 <div style="flex: 1 1 300px; min-width: 0">
@@ -443,12 +447,11 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">84.2K</div><div class="stat-l">likes</div></div>
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">3.7K</div><div class="stat-l">comments</div></div>
 </div>
-<p style="margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--muted)">Watch on YouTube ↗</p>
 </div>
 </div></div></div>
-</a>
-<a class="row-link mrow" href="https://youtu.be/a_TxX1aYd-E" target="_blank" rel="noopener" style="display: block; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--fg)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking into MrBeast's Abandoned City</span><span class="mono" style="font-size: 13px">2024</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">6.8M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+</div>
+<div class="row-link mrow" role="button" tabindex="0" aria-expanded="false" style="display: block; border-bottom: 1px solid var(--line); color: var(--fg); cursor: pointer">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking into MrBeast's Abandoned City</span><span class="mono" style="font-size: 13px">2024</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">6.8M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
 <div class="row-x"><div class="row-xi"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 2px 8px 22px">
 <img src="media/1ae44b33769d8d14e0d0ac099d586184.jpg" alt="YouTube thumbnail for Sneaking into MrBeast's Abandoned City" style="width: clamp(200px, 22vw, 280px); aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; flex: 0 0 auto">
 <div style="flex: 1 1 300px; min-width: 0">
@@ -458,12 +461,11 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">116K</div><div class="stat-l">likes</div></div>
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">4.0K</div><div class="stat-l">comments</div></div>
 </div>
-<p style="margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--muted)">Watch on YouTube ↗</p>
 </div>
 </div></div></div>
-</a>
-<a class="row-link mrow" href="https://youtu.be/FfOF87YKyYI" target="_blank" rel="noopener" style="display: block; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--fg)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking onto Mr Beast's Abandoned Island</span><span class="mono" style="font-size: 13px">2023</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">5.9M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+</div>
+<div class="row-link mrow" role="button" tabindex="0" aria-expanded="false" style="display: block; border-bottom: 1px solid var(--line); color: var(--fg); cursor: pointer">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking onto Mr Beast's Abandoned Island</span><span class="mono" style="font-size: 13px">2023</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">5.9M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
 <div class="row-x"><div class="row-xi"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 2px 8px 22px">
 <img src="media/7af14b0c2a6cad2fc6bac3c0341f4400.jpg" alt="YouTube thumbnail for Sneaking onto Mr Beast's Abandoned Island" style="width: clamp(200px, 22vw, 280px); aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; flex: 0 0 auto">
 <div style="flex: 1 1 300px; min-width: 0">
@@ -473,12 +475,11 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">75.7K</div><div class="stat-l">likes</div></div>
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">1.8K</div><div class="stat-l">comments</div></div>
 </div>
-<p style="margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--muted)">Watch on YouTube ↗</p>
 </div>
 </div></div></div>
-</a>
-<a class="row-link mrow" href="https://youtu.be/xwC7Ot3VhfA" target="_blank" rel="noopener" style="display: block; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--fg)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Overnight on the World's Deadliest Island</span><span class="mono" style="font-size: 13px">2023</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">10.4M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+</div>
+<div class="row-link mrow" role="button" tabindex="0" aria-expanded="false" style="display: block; border-bottom: 1px solid var(--line); color: var(--fg); cursor: pointer">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Overnight on the World's Deadliest Island</span><span class="mono" style="font-size: 13px">2023</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">10.4M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
 <div class="row-x"><div class="row-xi"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 2px 8px 22px">
 <img src="media/overnight_barrels.jpg" alt="Thumbnail for Overnight on the World's Deadliest Island" style="width: clamp(200px, 22vw, 280px); aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; flex: 0 0 auto">
 <div style="flex: 1 1 300px; min-width: 0">
@@ -488,12 +489,11 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">76.2K</div><div class="stat-l">likes</div></div>
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">2.3K</div><div class="stat-l">comments</div></div>
 </div>
-<p style="margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--muted)">Watch on YouTube ↗</p>
 </div>
 </div></div></div>
-</a>
-<a class="row-link mrow" href="https://youtu.be/jm2NXO751oA" target="_blank" rel="noopener" style="display: block; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--fg)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking Onto The World's Deadliest Island</span><span class="mono" style="font-size: 13px">2021</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">10.1M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+</div>
+<div class="row-link mrow" role="button" tabindex="0" aria-expanded="false" style="display: block; border-bottom: 1px solid var(--line); color: var(--fg); cursor: pointer">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding: 18px 8px"><span style="flex: 999 1 300px; min-width: 0; font-weight: 800; font-size: clamp(17px, 1.7vw, 22px)">Sneaking Onto The World's Deadliest Island</span><span class="mono" style="font-size: 13px">2021</span><span style="flex: 0 0 96px; text-align: right; font-weight: 900; font-size: 21px">10.1M</span><span class="row-arrow" style="color: var(--faint); display: inline-flex" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
 <div class="row-x"><div class="row-xi"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 2px 8px 22px">
 <img src="media/a036a2ee87c9ae5a1a7066fe62a85275.jpg" alt="YouTube thumbnail for Sneaking Onto The World's Deadliest Island" style="width: clamp(200px, 22vw, 280px); aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; flex: 0 0 auto">
 <div style="flex: 1 1 300px; min-width: 0">
@@ -503,10 +503,9 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">93.4K</div><div class="stat-l">likes</div></div>
 <div style="padding: 14px 12px; background: var(--card)"><div class="stat-v" style="font-size: 24px">3.1K</div><div class="stat-l">comments</div></div>
 </div>
-<p style="margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--muted)">Watch on YouTube ↗</p>
 </div>
 </div></div></div>
-</a>
+</div>
 </div>
 <p class="note">Lifetime YouTube views, 7 Nov 2026.</p>
 </div>
@@ -849,6 +848,22 @@ a{color:#FF4D00}a:hover{color:#FFFFFF}
   onceVisible(root.querySelector('[data-count]'), function () { animate(1600, paintFilms); });
   onceVisible(root.querySelector('[data-count2]'), function () { animate(1400, paintPct); });
 
+
+
+  /* ---------- More from the channel: tap or click opens a row, no link out ---------- */
+  var mrows = Array.prototype.slice.call(root.querySelectorAll('.mrow'));
+  var setRow = function (row, open) { row.classList.toggle('open', open); row.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+  var toggleRow = function (row) {
+    var opening = !row.classList.contains('open');
+    mrows.forEach(function (r) { setRow(r, false); });
+    if (opening) setRow(row, true);
+  };
+  mrows.forEach(function (row) {
+    row.addEventListener('click', function () { toggleRow(row); });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleRow(row); }
+    });
+  });
 
   /* ---------- Phones: swipe rails with dots ---------- */
   var rails = Array.prototype.slice.call(root.querySelectorAll('[data-rail]'));
